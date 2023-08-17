@@ -134,10 +134,7 @@ with open(os.path.join(args.res_dir, 'cmd_input.txt'), 'a') as f:
     f.write(cmd_input)
 print('Command line input: ' + cmd_input + ' is saved.')
 
-if args.data == 'all':
-    datasets = [ 'DD', 'MUTAG', 'PROTEINS', 'PTC_MR', 'ENZYMES']
-else:
-    datasets = [args.data]
+datasets = [args.data]
 
 if args.search:
     if args.h is None:
@@ -145,11 +142,6 @@ if args.search:
         hiddens = [32]
         hs = [None]
     else:
-        # layers = [2]
-        # hiddens = [16]
-        # hs = [2]
-
-        # current use
         if args.isMultiFusion:
             layers = [3, 2, 4, 2, 3]
             hiddens = [2, 3, 3, 5, 10]
@@ -158,20 +150,12 @@ if args.search:
             layers = [2, 3, 2, 3, 4]
             hiddens = [16, 16, 10, 10, 5]
             hs = [2, 3, 4, 4, 2]
-
-        # layers = [2, 4, 2, 3, 2, 3, 4]
-        # hiddens = [5, 5, 16, 16, 10, 10, 16]
-        # hs = [2, 3, 2, 3, 4, 4, 2]
 else:
     layers = [args.layers]
     hiddens = [args.hiddens]
     hs = [args.h]
 
-if args.model == 'all':
-    #nets = [GCN, GraphSAGE, GIN, GAT]
-    nets = [NestedGCN, NestedGraphSAGE, NestedGIN, NestedGAT]
-else:
-    nets = [eval(args.model)]
+nets = [eval(args.model)]
 
 def logger(info):
     f = open(os.path.join(args.res_dir, 'log.txt'), 'a')
@@ -195,9 +179,6 @@ for dataset_name, Net in product(datasets, nets):
     else:
         combinations = product(layers, hiddens, hs)
     for num_layers, hidden, h in combinations:
-        if dataset_name == 'DD' and Net.__name__ == 'NestedGAT' and h >= 5:
-            print('NestedGAT on DD will OOM for h >= 5. Skipped.')
-            continue
         log = "Using {} layers, {} hidden units, h = {}".format(num_layers, hidden, h)
         print(log)
         logger(log)
@@ -249,7 +230,7 @@ for dataset_name, Net in product(datasets, nets):
     desc = '{:.3f} ± {:.3f}'.format(
         best_result[1], best_result[2]
     )
-    log = 'Best result - {}, with {} layers and {} hidden units and h = {}'.format(
+    log = 'Result - {}, with {} layers and {} hidden units and h = {}'.format(
         desc, best_hyper[0], best_hyper[1], best_hyper[2]
     )
     print(log)
