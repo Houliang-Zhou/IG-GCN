@@ -257,31 +257,52 @@ class SGCN_GCN_IMGSNP(torch.nn.Module):
         if self.isImageOnly:
             out_z = img_out
             out_lin = out_z
+            linear_outf = F.relu(self.lin1(out_lin))
+            x = F.dropout(linear_outf, p=0.5, training=self.training)
+            x = self.lin2(x)
+            if self.isuseProb4Regr:
+                fill_value = data.x.min().item() - 1
+                batch_x, _ = to_dense_batch(data.x, batch, fill_value)
+                B, N, D = batch_x.size()
+                batch_x = batch_x * self.prob #* torch.sigmoid(self.prob)
+                img_feat = batch_x.view(B, -1)
+                feat4regr = torch.cat((out_lin, img_feat), -1)
+                our_reg = F.relu(self.lin1_regr(feat4regr))
+                our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+                our_reg = self.lin2_regr(our_reg)
+            else:
+                our_reg = F.relu(self.lin1_regr(out_lin))
+                our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+                our_reg = self.lin2_regr(our_reg)
         elif self.isSNPsOnly:
             out_z = latent
             out_lin = torch.cat((snps_feat_prob, latent), -1)
-        else:
-            out_z = (img_out + out_cross) / 2
-            out_lin = torch.cat((out_z, latent), -1)
-
-        linear_outf = F.relu(self.lin1(out_lin))
-        x = F.dropout(linear_outf, p=0.5, training=self.training)
-        x = self.lin2(x)
-
-        if self.isuseProb4Regr:
-            fill_value = data.x.min().item() - 1
-            batch_x, _ = to_dense_batch(data.x, batch, fill_value)
-            B, N, D = batch_x.size()
-            batch_x = batch_x * self.prob #* torch.sigmoid(self.prob)
-            img_feat = batch_x.view(B, -1)
-            feat4regr = torch.cat((out_lin, img_feat), -1)
-            our_reg = F.relu(self.lin1_regr(feat4regr))
-            our_reg = F.dropout(our_reg, p=0.3, training=self.training)
-            our_reg = self.lin2_regr(our_reg)
-        else:
+            linear_outf = F.relu(self.lin1(out_lin))
+            x = F.dropout(linear_outf, p=0.5, training=self.training)
+            x = self.lin2(x)
             our_reg = F.relu(self.lin1_regr(out_lin))
             our_reg = F.dropout(our_reg, p=0.3, training=self.training)
             our_reg = self.lin2_regr(our_reg)
+        else:
+            out_z = (img_out + out_cross) / 2
+            out_lin = torch.cat((out_z, latent), -1)
+            linear_outf = F.relu(self.lin1(out_lin))
+            x = F.dropout(linear_outf, p=0.5, training=self.training)
+            x = self.lin2(x)
+            if self.isuseProb4Regr:
+                fill_value = data.x.min().item() - 1
+                batch_x, _ = to_dense_batch(data.x, batch, fill_value)
+                B, N, D = batch_x.size()
+                batch_x = batch_x * self.prob #* torch.sigmoid(self.prob)
+                img_feat = batch_x.view(B, -1)
+                feat4regr = torch.cat((out_lin, img_feat), -1)
+                our_reg = F.relu(self.lin1_regr(feat4regr))
+                our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+                our_reg = self.lin2_regr(our_reg)
+            else:
+                our_reg = F.relu(self.lin1_regr(out_lin))
+                our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+                our_reg = self.lin2_regr(our_reg)
 
         return F.log_softmax(x, dim=-1), x_hat, out_z, out_lin, linear_outf, our_reg
 
