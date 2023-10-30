@@ -30,4 +30,8 @@ You can also specify the learning hyperparameters to run
 ```
 python main.py --epochs 200 --lr 0.001 --search --cuda 0
 ```
-The hyperparameters are in `main.py`. The training framework is located in `kernel/train_eval_sgcn_img_snps.py`. The model is located in `kernel/sgcn_img_snp.py`
+`main.py`: tunning hyperparameters
+`kernel/train_eval_sgcn_img_snps.py`: training framework
+`kernel/sgcn_img_snp.py`: training model
+`snps_graph.py`: build the GO graph
+`kernel/go_model.py`: build GO hierarchical GAT model
