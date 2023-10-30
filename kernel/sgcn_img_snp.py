@@ -13,7 +13,7 @@ from util.image_cluster import rbf_kernel_torch
 class SGCN_GCN_IMGSNP(torch.nn.Module):
 
     def __init__(self, num_layers, hidden, A_g, A, pool_dim, l_dim, device, *args, hidden_linear=64, rois=90, H_0=3, num_classes=2,
-                 isCrossAtten=False, isSoftSimilarity=False, rbf_gamma=0.005, graph_pool=False, isuseFeat4Regr = False, num_regr = 4, model4eachregr = False, isImageOnly = True, isSNPsOnly = False,
+                 isCrossAtten=False, isSoftSimilarity=False, rbf_gamma=0.005, graph_pool=False, isuseProb4Regr = False, num_regr = 4, model4eachregr = False, isImageOnly = True, isSNPsOnly = False,
                  isMultiFusion=False, **kwargs):
         super(SGCN_GCN_IMGSNP, self).__init__()
         self.device=device
@@ -21,6 +21,7 @@ class SGCN_GCN_IMGSNP(torch.nn.Module):
         self.isSoftSimilarity=isSoftSimilarity
         self.rbf_gamma = rbf_gamma
         self.model4eachregr=model4eachregr
+        self.isuseProb4Regr=isuseProb4Regr
         self.isImageOnly=isImageOnly
         self.isSNPsOnly=isSNPsOnly
         self.num_regr=num_regr
@@ -59,19 +60,28 @@ class SGCN_GCN_IMGSNP(torch.nn.Module):
                 self.lin1 = torch.nn.Linear(l_dim + 54, hidden_linear)
             else:
                 self.lin1 = torch.nn.Linear(rois * num_layers * hidden + l_dim, hidden_linear)
-            if isImageOnly:
-                self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden, hidden_linear)
-            elif isSNPsOnly:
-                self.lin1_regr = torch.nn.Linear(l_dim + 54, hidden_linear)
+            # if isImageOnly:
+            #     self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden, hidden_linear)
+            # elif isSNPsOnly:
+            #     self.lin1_regr = torch.nn.Linear(l_dim + 54, hidden_linear)
+            # else:
+            #     self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden + l_dim, hidden_linear)
+            if isuseProb4Regr:
+                if isImageOnly:
+                    self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden + rois * H_0, hidden_linear)
+                elif isSNPsOnly:
+                    self.lin1_regr = torch.nn.Linear(l_dim + 54, hidden_linear)
+                else:
+                    self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden + l_dim + rois * H_0, hidden_linear)
             else:
-                self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden + l_dim, hidden_linear)
+                if isImageOnly:
+                    self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden, hidden_linear)
+                elif isSNPsOnly:
+                    self.lin1_regr = torch.nn.Linear(l_dim + 54, hidden_linear)
+                else:
+                    self.lin1_regr = torch.nn.Linear(rois * num_layers * hidden + l_dim, hidden_linear)
         self.lin2 = Linear(hidden_linear, num_classes)
-        if model4eachregr:
-            self.lin2_regr = []
-            for i in range(num_regr):
-                self.lin2_regr.append(torch.nn.Linear(hidden_linear, 1).to(device))
-        else:
-            self.lin2_regr = torch.nn.Linear(hidden_linear, num_regr)
+        self.lin2_regr = torch.nn.Linear(hidden_linear, num_regr)
 
         self.batch_norm_1d = torch.nn.BatchNorm1d(num_features= rois * num_layers * hidden + l_dim)
 
@@ -258,9 +268,20 @@ class SGCN_GCN_IMGSNP(torch.nn.Module):
         x = F.dropout(linear_outf, p=0.5, training=self.training)
         x = self.lin2(x)
 
-        our_reg = F.relu(self.lin1_regr(out_lin))
-        our_reg = F.dropout(our_reg, p=0.3, training=self.training)
-        our_reg = self.lin2_regr(our_reg)
+        if self.isuseProb4Regr:
+            fill_value = data.x.min().item() - 1
+            batch_x, _ = to_dense_batch(data.x, batch, fill_value)
+            B, N, D = batch_x.size()
+            batch_x = batch_x * self.prob #* torch.sigmoid(self.prob)
+            img_feat = batch_x.view(B, -1)
+            feat4regr = torch.cat((out_lin, img_feat), -1)
+            our_reg = F.relu(self.lin1_regr(feat4regr))
+            our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+            our_reg = self.lin2_regr(our_reg)
+        else:
+            our_reg = F.relu(self.lin1_regr(out_lin))
+            our_reg = F.dropout(our_reg, p=0.3, training=self.training)
+            our_reg = self.lin2_regr(our_reg)
 
         return F.log_softmax(x, dim=-1), x_hat, out_z, out_lin, linear_outf, our_reg
 

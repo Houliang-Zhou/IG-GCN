@@ -30,7 +30,7 @@ from util.convert_to_gpu_scalar import gpu_ts
 from util.convert_to_cpu import cpu
 from snps_graph import SnpsDataset, parse_go_json
 from kernel.sgcn_img_snp import SGCN_GCN_IMGSNP
-from util.tool import KNNImputation
+from util.tool import KNNImputation, KNNImputationVal
 
 def cross_validation_with_val_set(dataset,
                                   args,
@@ -76,6 +76,7 @@ def cross_validation_with_val_set(dataset,
     test_out_linear = []
     score_result = []
     test_losses, accs, durations = [], [], []
+    val_losses = []
     count = 1
     best_true_clini_scores = []
     best_true_clini_score_labels = []
@@ -89,16 +90,18 @@ def cross_validation_with_val_set(dataset,
         train_idx = torch.cat([train_idx], 0)
         train_dataset = dataset[train_idx]
         val_dataset = dataset[val_idx]
-        train_dataset, val_dataset = KNNImputation(args, train_dataset, val_dataset, scaler4score)
+        test_dataset = dataset[test_idx]
+        train_dataset, test_dataset, val_dataset = KNNImputationVal(args, train_dataset, val_dataset, test_dataset, scaler4score)
 
         train_loader = DataLoader(train_dataset, batch_size,
                                   shuffle=True)  # False, sampler=ImbalancedDatasetSampler(train_dataset)
         val_loader = DataLoader(val_dataset, batch_size, shuffle=False)
+        test_loader = DataLoader(test_dataset, batch_size, shuffle=False)
 
         model = SGCN_GCN_IMGSNP(num_layers, hidden, A_g, A, pool_dim, l_dim, device, rois=num_rois, H_0=feature_dim,
                                 num_classes=num_classes, isSoftSimilarity=isSoftSimilarity, rbf_gamma=rbf_gamma,
                                 isCrossAtten=isCrossAtten, num_regr=num_regr,
-                                model4eachregr=model4eachregr, isuseFeat4Regr=args.isuseFeat4Regr,
+                                model4eachregr=model4eachregr, isuseProb4Regr=args.isuseProb4Regr,
                                 isImageOnly=args.isImageOnly, isSNPsOnly=args.isSNPsOnly,
                                 isMultiFusion=args.isMultiFusion)
         model = model.to(device)
@@ -121,18 +124,21 @@ def cross_validation_with_val_set(dataset,
         for epoch in pbar:
             train_loss = train(model, optimizer, train_loader, temperature, lambda_loss, criterion_recon,
                                isSoftSimilarity, device)
-            test_losses.append(
+            val_losses.append(
                 eval_loss(model, val_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device))
+            test_losses.append(
+                eval_loss(model, test_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device))
             accs.append(
-                eval_acc(model, val_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device))
+                eval_acc(model, test_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device))
             true_label, pred_label, acuracy, auc, test_f1, sensitivity, specificity, all_out_hidden, all_out_subid, all_out_linear, regression_result = eval_scores(
-                model, val_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device,
+                model, test_loader, temperature, lambda_loss, criterion_recon, isSoftSimilarity, device,
                 num_classes=num_classes, num_regr=num_regr)
             true_clini_score, pred_clini_score, corr, r2, mse = regression_result
             eval_info = {
                 'fold': fold,
                 'epoch': epoch,
                 'train_loss': train_loss,
+                'val_loss': val_losses[-1],
                 'test_loss': test_losses[-1],
                 'test_acc': accs[-1],
                 'test_auc': auc,
@@ -140,15 +146,12 @@ def cross_validation_with_val_set(dataset,
                 'test_sen': sensitivity,
                 'test_spe': specificity,
             }
-            log = 'Fold: %d, train_loss: %0.4f, test_loss: %0.4f, test_acc: %0.4f' % (
-                fold, eval_info["train_loss"], eval_info["test_loss"], eval_info["test_acc"]
+            log = 'Fold: %d, train_loss: %0.4f, test_loss: %0.4f' % (
+                fold, eval_info["train_loss"], eval_info["test_loss"]
             )
-            print_log = 'Fold: %d, epoch:%d, train_loss: %0.4f, test_loss: %0.4f, test_acc: %0.4f, test_auc: %0.4f, test_f1: %0.4f, test_sen: %0.4f, test_spe: %0.4f,' \
+            print_log = 'Fold: %d, epoch:%d, train_loss: %0.4f, val_loss: %0.4f, test_loss: %0.4f,' \
                         ' ' % (
-                            fold, eval_info["epoch"], eval_info["train_loss"], eval_info["test_loss"],
-                            eval_info["test_acc"], eval_info["test_auc"], eval_info["test_f1"]
-                            , eval_info["test_sen"], eval_info["test_spe"]
-                        )
+                            fold, eval_info["epoch"], eval_info["train_loss"], eval_info["val_loss"], eval_info["test_loss"])
             if args.clinical_score_index == -1:
                 scores_name = ['tau', 'adas13', 'mmse']  # 'tau',
                 for each_regr in range(len(corr)):
@@ -170,8 +173,8 @@ def cross_validation_with_val_set(dataset,
                 [eval_info["test_acc"], eval_info["test_auc"], eval_info["test_f1"], eval_info["test_sen"],
                  eval_info["test_spe"]])
 
-            if best_loss > eval_info["test_loss"]:
-                best_loss = eval_info["test_loss"]
+            if best_loss > eval_info["val_loss"]:
+                best_loss = eval_info["val_loss"]
                 best_all_out_hidden = all_out_hidden
                 best_all_out_subid = all_out_subid
                 best_all_out_linear = all_out_linear
@@ -209,18 +212,18 @@ def cross_validation_with_val_set(dataset,
     acc_max, argmax = acc_mean.max(dim=0)
     acc_final = acc_mean[-1]
 
-    log = ('Test Loss: {:.4f}, Test Max Accuracy: {:.3f} ± {:.3f}, ' +
-           'Test Final Accuracy: {:.3f} ± {:.3f}, Duration: {:.3f}').format(
-        loss.mean().item(),
-        acc_max.item(),
-        acc[:, argmax].std().item(),
-        acc_final.item(),
-        acc[:, -1].std().item(),
-        duration.mean().item()
-    )
-    print(log)
-    if logger is not None:
-        logger(log)
+    # log = ('Test Loss: {:.4f}, Test Max Accuracy: {:.3f} ± {:.3f}, ' +
+    #        'Test Final Accuracy: {:.3f} ± {:.3f}, Duration: {:.3f}').format(
+    #     loss.mean().item(),
+    #     acc_max.item(),
+    #     acc[:, argmax].std().item(),
+    #     acc_final.item(),
+    #     acc[:, -1].std().item(),
+    #     duration.mean().item()
+    # )
+    # print(log)
+    # if logger is not None:
+    #     logger(log)
 
     score_result = np.asarray(score_result)
     output_npy(result_path, score_result, args=args)
@@ -304,7 +307,7 @@ def cross_validation_without_val_set( dataset,
         test_loader = DataLoader(test_dataset, batch_size, shuffle=False)
 
         model = SGCN_GCN_IMGSNP(num_layers, hidden, A_g, A, pool_dim, l_dim, device, rois=num_rois, H_0=feature_dim, num_classes=num_classes, isSoftSimilarity=isSoftSimilarity, rbf_gamma=rbf_gamma, isCrossAtten=isCrossAtten,num_regr=num_regr,
-                                model4eachregr=model4eachregr, isuseFeat4Regr=args.isuseFeat4Regr, isImageOnly=args.isImageOnly, isSNPsOnly=args.isSNPsOnly, isMultiFusion=args.isMultiFusion)
+                                model4eachregr=model4eachregr, isuseProb4Regr=args.isuseProb4Regr, isImageOnly=args.isImageOnly, isSNPsOnly=args.isSNPsOnly, isMultiFusion=args.isMultiFusion)
         model = model.to(device)
         optimizer = Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
@@ -339,13 +342,12 @@ def cross_validation_without_val_set( dataset,
                 'test_sen': sensitivity,
                 'test_spe': specificity,
             }
-            log = 'Fold: %d, train_loss: %0.4f, test_loss: %0.4f, test_acc: %0.4f' % (
-                fold, eval_info["train_loss"], eval_info["test_loss"], eval_info["test_acc"]
+            log = 'Fold: %d, train_loss: %0.4f, test_loss: %0.4f' % (
+                fold, eval_info["train_loss"], eval_info["test_loss"]
             )
-            print_log = 'Fold: %d, epoch:%d, train_loss: %0.4f, test_loss: %0.4f, test_acc: %0.4f, test_auc: %0.4f, test_f1: %0.4f, test_sen: %0.4f, test_spe: %0.4f,' \
+            print_log = 'Fold: %d, epoch:%d, train_loss: %0.4f, test_loss: %0.4f' \
                         ' ' % (
-                fold, eval_info["epoch"], eval_info["train_loss"], eval_info["test_loss"], eval_info["test_acc"], eval_info["test_auc"], eval_info["test_f1"]
-                , eval_info["test_sen"], eval_info["test_spe"]
+                fold, eval_info["epoch"], eval_info["train_loss"], eval_info["test_loss"]
             )
             if args.clinical_score_index == -1:
                 scores_name = ['tau', 'adas13', 'mmse'] #'tau',
@@ -405,18 +407,18 @@ def cross_validation_without_val_set( dataset,
     acc_max, argmax = acc_mean.max(dim=0)
     acc_final = acc_mean[-1]
 
-    log = ('Test Loss: {:.4f}, Test Max Accuracy: {:.3f} ± {:.3f}, ' +
-          'Test Final Accuracy: {:.3f} ± {:.3f}, Duration: {:.3f}').format(
-        loss.mean().item(),
-        acc_max.item(),
-        acc[:, argmax].std().item(),
-        acc_final.item(),
-        acc[:, -1].std().item(),
-        duration.mean().item()
-    )
-    print(log)
-    if logger is not None:
-        logger(log)
+    # log = ('Test Loss: {:.4f}, Test Max Accuracy: {:.3f} ± {:.3f}, ' +
+    #       'Test Final Accuracy: {:.3f} ± {:.3f}, Duration: {:.3f}').format(
+    #     loss.mean().item(),
+    #     acc_max.item(),
+    #     acc[:, argmax].std().item(),
+    #     acc_final.item(),
+    #     acc[:, -1].std().item(),
+    #     duration.mean().item()
+    # )
+    # print(log)
+    # if logger is not None:
+    #     logger(log)
 
     score_result = np.asarray(score_result)
     output_npy(result_path, score_result, args=args)

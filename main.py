@@ -8,7 +8,7 @@ import argparse
 import random
 import torch
 import numpy as np
-from kernel.train_eval_sgcn_img_snps import cross_validation_with_val_set
+from kernel.train_eval_sgcn_img_snps import cross_validation_with_val_set, cross_validation_without_val_set
 from kernel.gcn import *
 from kernel.graph_sage import *
 from kernel.gin import *
@@ -36,6 +36,8 @@ parser = argparse.ArgumentParser(description='GNN for ADNI graphs')
 parser.add_argument('--model', type=str, default='SGCN_GCN_IMGSNP')
 parser.add_argument('--knn', type=int, default=5,
                     help='k for knn graph')
+parser.add_argument('--no_val', action='store_true', default=False,
+                    help='if True, do not use validation set, but directly report test performance.')
 parser.add_argument('--isPPr', action='store_true', default=True,
                     help='is PPr in building DGC')
 parser.add_argument('--isTopK', action='store_true', default=True,
@@ -60,20 +62,20 @@ parser.add_argument('--isPermutTest', action='store_true', default=False,
                     help='is Permutation Test')
 parser.add_argument('--isMultiFusion', action='store_true', default=False,
                     help='isMultiFusion')
-
-parser.add_argument('--isuseFeat4Regr', action='store_true', default=True,
-                    help='isuseFeat4Regr')
+parser.add_argument('--isuseProb4Regr', action='store_true', default=True,
+                    help='use Prob4Regr')
 parser.add_argument('--isImageOnly', action='store_true', default=False,
                     help='isImageOnly')
 parser.add_argument('--isSNPsOnly', action='store_true', default=False,
                     help='isSNPsOnly')
+
 parser.add_argument('--Seed4PermutTest', type=int, default=1)
 parser.add_argument('--lambda_disease', type=float, default=0.0)
 parser.add_argument('--lambda_regr', type=float, default=1.0)
 parser.add_argument('--lambda_prob', type=float, default=0.5)
 parser.add_argument('--lambda_reco', type=float, default=0.0000015)
 parser.add_argument('--lambda_simi', type=float, default=0.1)
-parser.add_argument('--lambda_orth', type=float, default=0.01)
+parser.add_argument('--lambda_orth', type=float, default=0.0)
 
 # General settings.
 parser.add_argument('--data', type=str, default='ADNI')
@@ -166,7 +168,10 @@ device = torch.device(
 )
 print(device)
 
-cross_val_method = cross_validation_with_val_set
+if args.no_val:
+    cross_val_method = cross_validation_without_val_set
+else:
+    cross_val_method = cross_validation_with_val_set
 
 results = []
 for dataset_name, Net in product(datasets, nets):

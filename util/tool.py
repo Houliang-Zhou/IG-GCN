@@ -19,6 +19,59 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from scipy.stats import pearsonr, spearmanr
 from sklearn.impute import KNNImputer
 
+def KNNImputationVal(args, train_dataset, val_dataset, test_dataset, scaler4score, k=3):
+    demographics_train = []
+    clini_score_train = []
+    demographics_test = []
+    clini_score_test = []
+    demographics_val = []
+    clini_score_val = []
+    for eachdata in train_dataset:
+        demographics_train.append(eachdata.demographics.unsqueeze(0))
+        clini_score_train.append(eachdata.clini_score.unsqueeze(0))
+    for eachdata in val_dataset:
+        demographics_val.append(eachdata.demographics.unsqueeze(0))
+        clini_score_val.append(eachdata.clini_score.unsqueeze(0))
+    for eachdata in test_dataset:
+        demographics_test.append(eachdata.demographics.unsqueeze(0))
+        clini_score_test.append(eachdata.clini_score.unsqueeze(0))
+    demographics_train = torch.cat(demographics_train).numpy()
+    clini_score_train = torch.cat(clini_score_train).numpy()
+    demographics_test = torch.cat(demographics_test).numpy()
+    clini_score_test = torch.cat(clini_score_test).numpy()
+    demographics_val = torch.cat(demographics_val).numpy()
+    clini_score_val = torch.cat(clini_score_val).numpy()
+    imputer = KNNImputer(n_neighbors=k)
+    demographics_train = imputer.fit_transform(demographics_train)
+    demographics_test = imputer.transform(demographics_test)
+    demographics_val = imputer.transform(demographics_val)
+    demographics_train = scaler4score.transform(demographics_train)
+    demographics_test = scaler4score.transform(demographics_test)
+    demographics_val = scaler4score.transform(demographics_val)
+    if args.clinical_score_index == -1:
+        select_index = np.array([5, 7, 8])
+        for i in range(len(train_dataset)):
+            clini_score = torch.Tensor(demographics_train[i, select_index]).float()
+            train_dataset[i].clini_score = clini_score
+        for i in range(len(test_dataset)):
+            clini_score = torch.Tensor(demographics_test[i, select_index]).float()
+            test_dataset[i].clini_score = clini_score
+        for i in range(len(val_dataset)):
+            clini_score = torch.Tensor(demographics_val[i, select_index]).float()
+            val_dataset[i].clini_score = clini_score
+    else:
+        select_index = np.array([args.clinical_score_index])
+        for i in range(len(train_dataset)):
+            clini_score = torch.Tensor(demographics_train[i, select_index]).float()
+            train_dataset[i].clini_score = clini_score
+        for i in range(len(test_dataset)):
+            clini_score = torch.Tensor(demographics_test[i, select_index]).float()
+            test_dataset[i].clini_score = clini_score
+        for i in range(len(val_dataset)):
+            clini_score = torch.Tensor(demographics_val[i, select_index]).float()
+            val_dataset[i].clini_score = clini_score
+    return train_dataset, test_dataset, val_dataset
+
 def KNNImputation(args, train_dataset, test_dataset, scaler4score, k=3):
     demographics_train = []
     clini_score_train = []

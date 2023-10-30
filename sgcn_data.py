@@ -77,29 +77,21 @@ def loadBrainImg_Snps_CSV(disease_id=0, path = './data/snps/data/%s/', k_inknn =
     file_path_img += "knn/%d/" % (k_inknn)
     BL_DXGrp_label = sio.loadmat(file_path_img + 'BL_DXGrp_label.mat')
     corr_data = sio.loadmat(file_path_img + 'corr_data.mat')
-    imgData_mat = sio.loadmat(file_path_img + 'imgData_mat.mat')
-    imgData_mat_normalized = sio.loadmat(file_path_img + 'imgData_mat_normalized.mat')
+    # imgData_mat = sio.loadmat(file_path_img + 'imgData_mat.mat')
+    imgData_mat_normalized = sio.loadmat(file_path_img + 'imgData_mat_normalized_fix.mat')
     BL_DXGrp_label = BL_DXGrp_label['BL_DXGrp_label']
     corr_data = corr_data['corr_data']
-    imgData_mat = imgData_mat['imgData_mat']
+    # imgData_mat = imgData_mat['imgData_mat']
     imgData_mat_normalized = imgData_mat_normalized['imgData_mat_normalized']
-    imgData_mat[np.isnan(imgData_mat)] = 0
+    # imgData_mat[np.isnan(imgData_mat)] = 0
     imgData_mat_normalized[np.isnan(imgData_mat_normalized)] = 0
 
     d1, d2, d3 = imgData_mat_normalized.shape[0], imgData_mat_normalized.shape[1], imgData_mat_normalized.shape[2]
-    imgData_mat = imgData_mat.reshape((d1, d2, -1))
+    # imgData_mat = imgData_mat.reshape((d1, d2, -1))
     imgData_mat_normalized = imgData_mat_normalized.reshape((d1, d2, -1))
     normal_sum = np.sum(BL_DXGrp_label == 0)
     abnor_sum = np.sum(BL_DXGrp_label == 1)
     print('number of normal and abnormal:', normal_sum, abnor_sum)
-
-    # img_scaler = MinMaxScaler()
-    # imgData_mat = np.transpose(imgData_mat, (2,0,1))
-    # imgData_mat_scaled = []
-    # for i in range(d3):
-    #     imgData_mat_scaled.append(img_scaler.fit_transform(imgData_mat[i]))
-    # imgData_mat_scaled = np.asarray(imgData_mat_scaled)
-    # imgData_mat_normalized = np.transpose(imgData_mat_scaled, (1,2,0))
 
     dataset = []
     for i in range(BL_DXGrp_label.shape[0]):
@@ -174,19 +166,19 @@ def loadBrainImg_Snps_ADNI874(disease_id=0, path = './data/snps/data/preprocessi
 
     BL_DXGrp_label = sio.loadmat(file_path_img + 'BL_DXGrp_label.mat')
     corr_data = sio.loadmat(file_path_img + 'corr_data.mat')
-    imgData_mat = sio.loadmat(file_path_img + 'imgData_mat.mat')
-    imgData_mat_normalized = sio.loadmat(file_path_img + 'imgData_mat_normalized.mat')
+    # imgData_mat = sio.loadmat(file_path_img + 'imgData_mat.mat')
+    imgData_mat_normalized = sio.loadmat(file_path_img + 'imgData_mat_normalized_fix.mat')
     BL_DXGrp_label = BL_DXGrp_label['BL_DXGrp_label']
     corr_data = corr_data['corr_data']
-    imgData_mat = imgData_mat['imgData_mat']
+    # imgData_mat = imgData_mat['imgData_mat']
     imgData_mat_normalized = imgData_mat_normalized['imgData_mat_normalized']
-    imgData_mat[np.isnan(imgData_mat)] = 0
+    # imgData_mat[np.isnan(imgData_mat)] = 0
     imgData_mat_normalized[np.isnan(imgData_mat_normalized)] = 0
 
     BL_DXGrp_label -= 1
 
     d1, d2 = imgData_mat_normalized.shape[0], imgData_mat_normalized.shape[1]
-    imgData_mat = imgData_mat.reshape((d1, d2, -1))
+    # imgData_mat = imgData_mat.reshape((d1, d2, -1))
     imgData_mat_normalized = imgData_mat_normalized.reshape((d1, d2, -1))
 
     '''
@@ -220,7 +212,7 @@ def loadBrainImg_Snps_ADNI874(disease_id=0, path = './data/snps/data/preprocessi
     tsne_results = tsne_results[select_indices]
     scores_regression = scores_regression[select_indices]
     scores_val_missing = scores_val_missing[select_indices]
-    imgData_mat = imgData_mat[select_indices]
+    # imgData_mat = imgData_mat[select_indices]
     corr_data = corr_data[select_indices]
     imgData_mat_normalized = imgData_mat_normalized[select_indices]
     scaled_snps_data = scaled_snps_data[select_indices]

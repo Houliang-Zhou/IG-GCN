@@ -1,0 +1,3380 @@
+{"overrepresentation": {
+    "reference": "",
+    "upload_lists": {"input_list": {
+        "organism": "Homo sapiens",
+        "list_name": "upload_1"
+    }},
+    "tool_release_date": 20221013,
+    "data_version_release_date": "GO Ontology database DOI:  10.5281/zenodo.6799722 Released 2022-07-01",
+    "annotation_type": "GO biological process complete",
+    "correction": "FDR",
+    "test_type": "FISHER",
+    "group": [
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 502.170731707317,
+                    "fdr": 0.009273238489222641,
+                    "expected": 0.003982709213657779,
+                    "pValue": 2.306334424333161E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1902998",
+                    "label": "positive regulation of neurofibrillary tangle assembly"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 167.390243902439,
+                    "fdr": 0.021256203468709916,
+                    "expected": 0.011948127640973336,
+                    "pValue": 1.0708756291231958E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 6,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0090261",
+                    "label": "positive regulation of inclusion body assembly"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 36,
+                    "fold_enrichment": 1.6159959186076174,
+                    "fdr": 0.00589515614845001,
+                    "expected": 22.27728398659478,
+                    "pValue": 1.0150450609537035E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "SLC24A4",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "RIN3",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 11187,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0050794",
+                    "label": "regulation of cellular process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 36,
+                    "fold_enrichment": 1.5312676894344752,
+                    "fdr": 0.012363141548732885,
+                    "expected": 23.509932488221867,
+                    "pValue": 4.415126119055172E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "SLC24A4",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "RIN3",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 11806,
+                "term": {
+                    "level": 5,
+                    "id": "GO:0050789",
+                    "label": "regulation of biological process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 37,
+                    "fold_enrichment": 1.4812115013688403,
+                    "fdr": 0.012183128735720609,
+                    "expected": 24.979552188061586,
+                    "pValue": 4.04006564796551E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "SLC24A4",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "POLR2E",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "RIN3",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 12544,
+                "term": {
+                    "level": 6,
+                    "id": "GO:0065007",
+                    "label": "biological regulation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 25,
+                    "fold_enrichment": 2.2141566653761777,
+                    "fdr": 0.00580131176239044,
+                    "expected": 11.2909806207198,
+                    "pValue": 9.61890860418031E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "CELF1",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CD2AP",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "ECHDC3",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5670,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0048522",
+                    "label": "positive regulation of cellular process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 27,
+                    "fold_enrichment": 2.15079469481243,
+                    "fdr": 0.0032510317875302994,
+                    "expected": 12.553499441449318,
+                    "pValue": 3.939136787390835E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SLC24A4",
+                        "SPI1",
+                        "CELF1",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CD2AP",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 6304,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0048518",
+                    "label": "positive regulation of biological process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 334.780487804878,
+                    "fdr": 0.012040019066060193,
+                    "expected": 0.005974063820486668,
+                    "pValue": 3.839046956845926E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902996",
+                    "label": "regulation of neurofibrillary tangle assembly"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 334.780487804878,
+                    "fdr": 0.012285733740877748,
+                    "expected": 0.005974063820486668,
+                    "pValue": 3.839046956845926E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0002434",
+                    "label": "immune complex clearance"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 7.4791385573430205,
+                    "fdr": 0.011831227820081665,
+                    "expected": 0.9359366652095779,
+                    "pValue": 3.847921808712231E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SBNO2",
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "CLU",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 470,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0002252",
+                    "label": "immune effector process"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 251.0853658536585,
+                    "fdr": 0.014546188406125428,
+                    "expected": 0.007965418427315558,
+                    "pValue": 5.751314847138426E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1905908",
+                    "label": "positive regulation of amyloid fibril formation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 20,
+                    "fold_enrichment": 2.60326973409703,
+                    "fdr": 0.0063732999051219754,
+                    "expected": 7.682646073145855,
+                    "pValue": 1.300590504201921E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "SCIMP",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "ABI3",
+                        "CASS4",
+                        "KAT8",
+                        "CLNK",
+                        "EPC2",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3858,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0009893",
+                    "label": "positive regulation of metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 28,
+                    "fold_enrichment": 2.081844904916328,
+                    "fdr": 0.003616033893038994,
+                    "expected": 13.449609014522316,
+                    "pValue": 5.303793096096987E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SLC24A4",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CD2AP",
+                        "ABI3",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 6754,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0019222",
+                    "label": "regulation of metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 18,
+                    "fold_enrichment": 2.551968709975073,
+                    "fdr": 0.014514144760718706,
+                    "expected": 7.053378017387925,
+                    "pValue": 6.20143931489161E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "SCIMP",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "CASS4",
+                        "KAT8",
+                        "CLNK",
+                        "EPC2",
+                        "APOE",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3542,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0010604",
+                    "label": "positive regulation of macromolecule metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 27,
+                    "fold_enrichment": 2.1819455674440875,
+                    "fdr": 0.0028285515640238098,
+                    "expected": 12.37427752683472,
+                    "pValue": 3.066473859346009E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SLC24A4",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CD2AP",
+                        "BIN1",
+                        "CASS4",
+                        "CLNK",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 6214,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0060255",
+                    "label": "regulation of macromolecule metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 15,
+                    "fold_enrichment": 2.9116973233899324,
+                    "fdr": 0.017140309301795983,
+                    "expected": 5.151634367866337,
+                    "pValue": 7.87004827325624E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "ABCA7",
+                        "CLU",
+                        "BIN1",
+                        "CASS4",
+                        "KAT8",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2587,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0051246",
+                    "label": "regulation of protein metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 14.266213968957873,
+                    "fdr": 0.009943427810408599,
+                    "expected": 0.35047841080188447,
+                    "pValue": 2.8534803358739044E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "APOE",
+                        "EPHA1",
+                        "CLU",
+                        "FERMT2"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 176,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902905",
+                    "label": "positive regulation of supramolecular fiber organization"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 251.0853658536585,
+                    "fdr": 0.01431529652666312,
+                    "expected": 0.007965418427315558,
+                    "pValue": 5.751314847138426E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1902995",
+                    "label": "positive regulation of phospholipid efflux"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 14,
+                    "fold_enrichment": 3.3414402299916532,
+                    "fdr": 0.011152126330665863,
+                    "expected": 4.189810092767983,
+                    "pValue": 3.3425797942815866E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CLU",
+                        "CD2AP",
+                        "ABI3",
+                        "BIN1",
+                        "RIN3",
+                        "APOE",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2104,
+                "term": {
+                    "level": 5,
+                    "id": "GO:0032879",
+                    "label": "regulation of localization"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 251.0853658536585,
+                    "fdr": 0.014091620018434009,
+                    "expected": 0.007965418427315558,
+                    "pValue": 5.751314847138426E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902994",
+                    "label": "regulation of phospholipid efflux"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 200.86829268292684,
+                    "fdr": 0.01704079061917932,
+                    "expected": 0.009956773034144446,
+                    "pValue": 8.041696995212484E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0017038",
+                    "label": "protein import"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 40,
+                    "fold_enrichment": 1.335205348862848,
+                    "fdr": 0.014874953469277462,
+                    "expected": 29.95793870513381,
+                    "pValue": 6.165882121695269E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "SLC24A4",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ADAMTS4",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "POLR2E",
+                        "CSTF1",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "BIN1",
+                        "NME8",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "RIN3",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 15044,
+                "term": {
+                    "level": 6,
+                    "id": "GO:0009987",
+                    "label": "cellular process"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 125.54268292682924,
+                    "fdr": 0.029910946042979156,
+                    "expected": 0.015930836854631116,
+                    "pValue": 1.7167177755679638E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 8,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1900223",
+                    "label": "positive regulation of amyloid-beta clearance"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 12,
+                    "fold_enrichment": 3.977589954117363,
+                    "fdr": 0.009884926904635693,
+                    "expected": 3.0169022293457672,
+                    "pValue": 2.7106170327105086E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "BIN1",
+                        "INPP5D",
+                        "CLNK",
+                        "ABCA7",
+                        "APOE",
+                        "EPHA1",
+                        "SCIMP",
+                        "CLU",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1515,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0051240",
+                    "label": "positive regulation of multicellular organismal process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 18,
+                    "fold_enrichment": 3.2869356984478935,
+                    "fdr": 0.0019433630880914886,
+                    "expected": 5.476225168779446,
+                    "pValue": 1.7350349616275008E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CUGBP2",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "BIN1",
+                        "INPP5D",
+                        "CLNK",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2750,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0051239",
+                    "label": "regulation of multicellular organismal process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 79.29011553273428,
+                    "fdr": 0.006120781974913095,
+                    "expected": 0.03783573752974889,
+                    "pValue": 1.0929270792523862E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 19,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1900221",
+                    "label": "regulation of amyloid-beta clearance"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 4,
+                    "fold_enrichment": 111.59349593495935,
+                    "fdr": 3.750808585958759E-4,
+                    "expected": 0.035844382922920005,
+                    "pValue": 9.567779059903728E-8,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 18,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1902430",
+                    "label": "negative regulation of amyloid-beta formation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 119.56445993031359,
+                    "fdr": 2.4087982994826354E-5,
+                    "expected": 0.04181844674340667,
+                    "pValue": 1.5361254380987408E-9,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 21,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902992",
+                    "label": "negative regulation of amyloid precursor protein catabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 58.39194554736246,
+                    "fdr": 2.0242250623813578E-4,
+                    "expected": 0.08562824809364222,
+                    "pValue": 3.872632604517616E-8,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 43,
+                "term": {
+                    "level": 2,
+                    "id": "GO:1902991",
+                    "label": "regulation of amyloid precursor protein catabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.337367164458593,
+                    "fdr": 0.03047006446762662,
+                    "expected": 2.0749915003157025,
+                    "pValue": 1.7876703851933226E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "BIN1",
+                        "CELF1",
+                        "ABCA7",
+                        "APOE",
+                        "EPHA1",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1042,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0051248",
+                    "label": "negative regulation of protein metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 19,
+                    "fold_enrichment": 3.4519695739649148,
+                    "fdr": 6.778137104836253E-4,
+                    "expected": 5.5041041332750495,
+                    "pValue": 3.4580126802302165E-7,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CLU",
+                        "CD2AP",
+                        "SBNO2",
+                        "BIN1",
+                        "INPP5D",
+                        "KAT8",
+                        "APOE",
+                        "EPHA1",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2764,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0010605",
+                    "label": "negative regulation of macromolecule metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 19,
+                    "fold_enrichment": 3.193187383681066,
+                    "fdr": 0.0015248422624054888,
+                    "expected": 5.950167565204721,
+                    "pValue": 1.1668966997554918E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CLU",
+                        "CD2AP",
+                        "SBNO2",
+                        "BIN1",
+                        "INPP5D",
+                        "KAT8",
+                        "APOE",
+                        "EPHA1",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2988,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0009892",
+                    "label": "negative regulation of metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 24,
+                    "fold_enrichment": 2.267989755546784,
+                    "fdr": 0.006562431363170755,
+                    "expected": 10.582058380688718,
+                    "pValue": 1.4228854431975362E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CLU",
+                        "CD2AP",
+                        "SBNO2",
+                        "ABI3",
+                        "BIN1",
+                        "INPP5D",
+                        "KAT8",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5314,
+                "term": {
+                    "level": 5,
+                    "id": "GO:0048519",
+                    "label": "negative regulation of biological process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 14,
+                    "fold_enrichment": 2.918385323330195,
+                    "fdr": 0.02710486462946942,
+                    "expected": 4.797173247850794,
+                    "pValue": 1.4692388836840128E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ABCA7",
+                        "CLU",
+                        "SBNO2",
+                        "BIN1",
+                        "KAT8",
+                        "APOE",
+                        "EPHA1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2409,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0051172",
+                    "label": "negative regulation of nitrogen compound metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 13.077362804878048,
+                    "fdr": 0.012421158340163604,
+                    "expected": 0.38234008451114676,
+                    "pValue": 4.277422041762863E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "CELF1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 192,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0034249",
+                    "label": "negative regulation of cellular amide metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 24,
+                    "fold_enrichment": 2.546935241119106,
+                    "fdr": 0.0017035027709498309,
+                    "expected": 9.423089999514303,
+                    "pValue": 1.0863483010967609E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "CLU",
+                        "CD2AP",
+                        "SBNO2",
+                        "ABI3",
+                        "BIN1",
+                        "INPP5D",
+                        "KAT8",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4732,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0048523",
+                    "label": "negative regulation of cellular process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 6,
+                    "fold_enrichment": 6.424359041031774,
+                    "fdr": 0.048466527347289255,
+                    "expected": 0.9339453106027491,
+                    "pValue": 3.2762272168947523E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "CELF1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 469,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0034248",
+                    "label": "regulation of cellular amide metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 69.7459349593496,
+                    "fdr": 1.3424767438088216E-4,
+                    "expected": 0.07168876584584001,
+                    "pValue": 1.7122335868998424E-8,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 36,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902003",
+                    "label": "regulation of amyloid-beta formation"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 100.43414634146342,
+                    "fdr": 0.03899315360645773,
+                    "expected": 0.019913546068288893,
+                    "pValue": 2.511516175149691E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 10,
+                "term": {
+                    "level": 0,
+                    "id": "GO:2000822",
+                    "label": "regulation of behavioral fear response"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 91.30376940133038,
+                    "fdr": 0.04427147886300491,
+                    "expected": 0.02190490067511778,
+                    "pValue": 2.9644189022482717E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 11,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1903365",
+                    "label": "regulation of fear response"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 14,
+                    "fold_enrichment": 5.120459026877231,
+                    "fdr": 5.941420115581592E-4,
+                    "expected": 2.734129875176065,
+                    "pValue": 2.2733576107065594E-7,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "ABCA7",
+                        "SCIMP",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "CLNK",
+                        "EPC2",
+                        "APOE",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1373,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0080134",
+                    "label": "regulation of response to stress"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 23,
+                    "fold_enrichment": 2.8631449750293236,
+                    "fdr": 5.904736888157515E-4,
+                    "expected": 8.03312448394774,
+                    "pValue": 2.6358751493592633E-7,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "INPP5D",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "EPC2",
+                        "RIN3",
+                        "APOE",
+                        "MS4A2",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4034,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0048583",
+                    "label": "regulation of response to stimulus"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 8,
+                    "fold_enrichment": 6.2575792113061315,
+                    "fdr": 0.011572971812841592,
+                    "expected": 1.2784496575841469,
+                    "pValue": 3.542520547263544E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SBNO2",
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "CLNK",
+                        "APOE",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 642,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0031347",
+                    "label": "regulation of defense response"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 91.30376940133038,
+                    "fdr": 0.044697166159764566,
+                    "expected": 0.02190490067511778,
+                    "pValue": 2.9644189022482717E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 11,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1902959",
+                    "label": "regulation of aspartic-type endopeptidase activity involved in amyloid precursor protein catabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 15,
+                    "fold_enrichment": 3.1742776972649627,
+                    "fdr": 0.009768038717614825,
+                    "expected": 4.725484482004954,
+                    "pValue": 2.865440858429194E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "USP6NL",
+                        "MEF2C",
+                        "CR1",
+                        "EED",
+                        "CLU",
+                        "BIN1",
+                        "CASS4",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2373,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0050790",
+                    "label": "regulation of catalytic activity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 17,
+                    "fold_enrichment": 2.759179844545698,
+                    "fdr": 0.012176653910658858,
+                    "expected": 6.161251153528584,
+                    "pValue": 4.1155708007456124E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "USP6NL",
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CLU",
+                        "BIN1",
+                        "CASS4",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3094,
+                "term": {
+                    "level": 5,
+                    "id": "GO:0065009",
+                    "label": "regulation of molecular function"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 2,
+                "fold_enrichment": 83.6951219512195,
+                "fdr": 0.04924027017088083,
+                "expected": 0.023896255281946673,
+                "pValue": 3.4541353987608517E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "ABCA7",
+                    "APOE"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 12,
+            "term": {
+                "level": 0,
+                "id": "GO:0033700",
+                "label": "phospholipid efflux"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 2,
+                    "fold_enrichment": 83.6951219512195,
+                    "fdr": 0.04879666413330533,
+                    "expected": 0.023896255281946673,
+                    "pValue": 3.4541353987608517E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 12,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0034380",
+                    "label": "high-density lipoprotein particle assembly"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 33.4780487804878,
+                    "fdr": 0.023212091666332618,
+                    "expected": 0.08961095730730002,
+                    "pValue": 1.1842148672320704E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 45,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0071825",
+                    "label": "protein-lipid complex subunit organization"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 11,
+                    "fold_enrichment": 3.881853864216787,
+                    "fdr": 0.017108198011411196,
+                    "expected": 2.8336976055175094,
+                    "pValue": 7.964405680970712E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "APOE",
+                        "CUGBP2",
+                        "CLU",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1423,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0043933",
+                    "label": "protein-containing complex organization"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 26,
+                    "fold_enrichment": 2.364012135504299,
+                    "fdr": 0.0018198594437209485,
+                    "expected": 10.998251493515955,
+                    "pValue": 1.0444955674694558E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ADAMTS4",
+                        "ZCWPW1",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "SUZ12",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "CD2AP",
+                        "BIN1",
+                        "NME8",
+                        "CASS4",
+                        "RIN3",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5523,
+                "term": {
+                    "level": 5,
+                    "id": "GO:0016043",
+                    "label": "cellular component organization"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 26,
+                    "fold_enrichment": 2.279804264779159,
+                    "fdr": 0.0032184128341070733,
+                    "expected": 11.404487833309048,
+                    "pValue": 3.6943709593729558E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "NYAP1",
+                        "SPI1",
+                        "CELF1",
+                        "CUGBP2",
+                        "CLU",
+                        "ADAMTS4",
+                        "ZCWPW1",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "SUZ12",
+                        "CR1",
+                        "EED",
+                        "ADAM10",
+                        "ABCA7",
+                        "CD2AP",
+                        "BIN1",
+                        "NME8",
+                        "CASS4",
+                        "RIN3",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5727,
+                "term": {
+                    "level": 6,
+                    "id": "GO:0071840",
+                    "label": "cellular component organization or biogenesis"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 57.94277673545967,
+                    "fdr": 0.00982269338896116,
+                    "expected": 0.05177521977755112,
+                    "pValue": 2.568270065349197E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "APOE"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 26,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0065005",
+                    "label": "protein-lipid complex assembly"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 11,
+                    "fold_enrichment": 4.349510274630306,
+                    "fdr": 0.010114464732471948,
+                    "expected": 2.529020350672689,
+                    "pValue": 2.838061655690107E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "CELF1",
+                        "ADAM10",
+                        "ABCA7",
+                        "APOE",
+                        "CUGBP2",
+                        "CLU",
+                        "FERMT2",
+                        "HLA-DRB1",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1270,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0065003",
+                    "label": "protein-containing complex assembly"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 75.32560975609756,
+                    "fdr": 0.0065605714413283465,
+                    "expected": 0.039827092136577785,
+                    "pValue": 1.2551313260624347E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 20,
+                "term": {
+                    "level": 0,
+                    "id": "GO:1902004",
+                    "label": "positive regulation of amyloid-beta formation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 16,
+                    "fold_enrichment": 2.573584787737692,
+                    "fdr": 0.030480646083835317,
+                    "expected": 6.217009082519792,
+                    "pValue": 1.8077291536232923E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "CELF1",
+                        "CLU",
+                        "ZCWPW1",
+                        "SBNO2",
+                        "ABI3",
+                        "CASS4",
+                        "KAT8",
+                        "EPC2",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 3122,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0031325",
+                    "label": "positive regulation of cellular metabolic process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 57.94277673545967,
+                    "fdr": 0.009588819736843038,
+                    "expected": 0.05177521977755112,
+                    "pValue": 2.568270065349197E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "APOE",
+                        "CLU",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 26,
+                "term": {
+                    "level": 1,
+                    "id": "GO:1902993",
+                    "label": "positive regulation of amyloid precursor protein catabolic process"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 3,
+                "fold_enrichment": 65.50053022269353,
+                "fdr": 0.007777080760790297,
+                "expected": 0.04580115595706446,
+                "pValue": 1.8350359552913778E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "ADAM10",
+                    "ABCA7",
+                    "APOE"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 23,
+            "term": {
+                "level": 0,
+                "id": "GO:0042982",
+                "label": "amyloid precursor protein metabolic process"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 3,
+                    "fold_enrichment": 30.130243902439023,
+                    "fdr": 0.02838437800225632,
+                    "expected": 0.09956773034144446,
+                    "pValue": 1.592899218288729E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "RIN3",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 50,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0045806",
+                    "label": "negative regulation of endocytosis"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 16.899976547842403,
+                    "fdr": 6.320185390337322E-4,
+                    "expected": 0.41420175822040894,
+                    "pValue": 2.01523671651595E-7,
+                    "mapped_id_list": {"mapped_id": [
+                        "BIN1",
+                        "ABCA7",
+                        "RIN3",
+                        "APOE",
+                        "CLU",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 208,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0030100",
+                    "label": "regulation of endocytosis"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 8,
+                    "fold_enrichment": 7.277836691410392,
+                    "fdr": 0.006575034089996421,
+                    "expected": 1.099227742969547,
+                    "pValue": 1.2159682967278631E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "BIN1",
+                        "ABCA7",
+                        "RIN3",
+                        "APOE",
+                        "CLU",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 552,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0060627",
+                    "label": "regulation of vesicle-mediated transport"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 8.080908326324641,
+                    "fdr": 0.00927821120366303,
+                    "expected": 0.8662392539705669,
+                    "pValue": 2.3667396731491692E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "BIN1",
+                        "ABCA7",
+                        "RIN3",
+                        "APOE",
+                        "CD33",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 435,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0051051",
+                    "label": "negative regulation of transport"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 3,
+                "fold_enrichment": 23.177110694183867,
+                "fdr": 0.048918997135499624,
+                "expected": 0.1294380494438778,
+                "pValue": 3.338009497798903E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "ABCA7",
+                    "APOE",
+                    "CLU"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 65,
+            "term": {
+                "level": 0,
+                "id": "GO:0030301",
+                "label": "cholesterol transport"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 4,
+                "fold_enrichment": 20.086829268292682,
+                "fdr": 0.013744840084780352,
+                "expected": 0.19913546068288893,
+                "pValue": 5.346822557053769E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "BIN1",
+                    "ABCA7",
+                    "APOE",
+                    "CLU"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 100,
+            "term": {
+                "level": 0,
+                "id": "GO:0045807",
+                "label": "positive regulation of endocytosis"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 4,
+                "fold_enrichment": 18.260753880266076,
+                "fdr": 0.01689351661507575,
+                "expected": 0.2190490067511778,
+                "pValue": 7.648999934126511E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "RIN3",
+                    "CLU",
+                    "CD2AP",
+                    "PICALM"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 110,
+            "term": {
+                "level": 0,
+                "id": "GO:0048259",
+                "label": "regulation of receptor-mediated endocytosis"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 5,
+                "fold_enrichment": 16.965227422544494,
+                "fdr": 0.006422072127227338,
+                "expected": 0.2947204818106756,
+                "pValue": 1.269588903412075E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "SBNO2",
+                    "SPI1",
+                    "ADAM10",
+                    "CLNK",
+                    "CLU"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 148,
+            "term": {
+                "level": 0,
+                "id": "GO:0002274",
+                "label": "myeloid leukocyte activation"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 4,
+                    "fold_enrichment": 14.347735191637632,
+                    "fdr": 0.03081253912047817,
+                    "expected": 0.27878964495604447,
+                    "pValue": 1.88636168328927E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "CLNK",
+                        "SCIMP",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 140,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0002705",
+                    "label": "positive regulation of leukocyte mediated immunity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 10.418479910940189,
+                    "fdr": 0.02336558021609069,
+                    "expected": 0.4799164602457623,
+                    "pValue": 1.2218465516991496E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "CLNK",
+                        "SCIMP",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 241,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0002703",
+                    "label": "regulation of leukocyte mediated immunity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 13,
+                    "fold_enrichment": 4.294881258023106,
+                    "fdr": 0.003666262801736322,
+                    "expected": 3.026859002379912,
+                    "pValue": 4.909860266339057E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "ADAM10",
+                        "SCIMP",
+                        "CLU",
+                        "INPP5D",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "MS4A2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1520,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0002682",
+                    "label": "regulation of immune system process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 9.403946286653877,
+                    "fdr": 0.03155505228812819,
+                    "expected": 0.5316916800233135,
+                    "pValue": 1.9519418863264042E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "CLNK",
+                        "SCIMP",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 267,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0002699",
+                    "label": "positive regulation of immune effector process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.673771029333872,
+                    "fdr": 0.020504902280757954,
+                    "expected": 1.9256399048035358,
+                    "pValue": 1.0199492238372044E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "ADAM10",
+                        "CLNK",
+                        "SCIMP",
+                        "CLU",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 967,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0002684",
+                    "label": "positive regulation of immune system process"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 4,
+                "fold_enrichment": 13.664509706321553,
+                "fdr": 0.03547778344075618,
+                "expected": 0.2927291272038467,
+                "pValue": 2.2624694497006687E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "CR1",
+                    "BIN1",
+                    "ABCA7",
+                    "CLU"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 147,
+            "term": {
+                "level": 0,
+                "id": "GO:0007009",
+                "label": "plasma membrane organization"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 4,
+                    "fold_enrichment": 12.248066627007734,
+                    "fdr": 0.049325002263903746,
+                    "expected": 0.3265821555199378,
+                    "pValue": 3.3971687038464413E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "INPP5D",
+                        "CLNK",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 164,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0051250",
+                    "label": "negative regulation of lymphocyte activation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 12.942544631631883,
+                    "fdr": 0.012347423708094007,
+                    "expected": 0.38632279372480455,
+                    "pValue": 4.4882542654254094E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 194,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0002695",
+                    "label": "negative regulation of leukocyte activation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 6,
+                    "fold_enrichment": 6.942452512082725,
+                    "fdr": 0.03441806927266776,
+                    "expected": 0.8642478993637379,
+                    "pValue": 2.172941048398768E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "RIN3",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 434,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0002683",
+                    "label": "negative regulation of immune system process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 8,
+                    "fold_enrichment": 5.4215463612126,
+                    "fdr": 0.019801290202529857,
+                    "expected": 1.475593763660207,
+                    "pValue": 9.59695207826203E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "APOE",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 741,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0050865",
+                    "label": "regulation of cell activation"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 6,
+                    "fold_enrichment": 13.949186991869919,
+                    "fdr": 0.003735406555894881,
+                    "expected": 0.4301325950750401,
+                    "pValue": 4.764245336260291E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "APOE",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 216,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0050866",
+                    "label": "negative regulation of cell activation"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 11.57075418680454,
+                    "fdr": 0.01688933757462539,
+                    "expected": 0.43212394968186896,
+                    "pValue": 7.539402016604662E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE",
+                        "SCIMP",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 217,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0070374",
+                    "label": "positive regulation of ERK1 and ERK2 cascade"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 8.286645737744507,
+                    "fdr": 0.04849280025622561,
+                    "expected": 0.6033804458691534,
+                    "pValue": 3.463550557169357E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "ABCA7",
+                        "APOE",
+                        "SCIMP",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 303,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0070372",
+                    "label": "regulation of ERK1 and ERK2 cascade"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 5.23094512195122,
+                    "fdr": 0.04948059526346271,
+                    "expected": 1.3381902957890135,
+                    "pValue": 3.439439374859662E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ABCA7",
+                        "APOE",
+                        "SCIMP",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 672,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0043408",
+                    "label": "regulation of MAPK cascade"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 7.26279983874219,
+                    "fdr": 0.012285311567613456,
+                    "expected": 0.9638156297051823,
+                    "pValue": 4.6223670843007075E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ABCA7",
+                        "APOE",
+                        "SCIMP",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 484,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0043410",
+                    "label": "positive regulation of MAPK cascade"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.524060646011866,
+                    "fdr": 0.024633032077916596,
+                    "expected": 1.9893632522220603,
+                    "pValue": 1.3038337239124274E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "CASS4",
+                        "ABCA7",
+                        "APOE",
+                        "SCIMP",
+                        "CLU",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 999,
+                "term": {
+                    "level": 2,
+                    "id": "GO:1902533",
+                    "label": "positive regulation of intracellular signal transduction"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 16,
+                    "fold_enrichment": 3.6143642408083996,
+                    "fdr": 0.002489657939545415,
+                    "expected": 4.426781290980621,
+                    "pValue": 2.5403052759853736E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "SCIMP",
+                        "CLU",
+                        "ZCWPW1",
+                        "INPP5D",
+                        "CASS4",
+                        "CLNK",
+                        "ECHDC3",
+                        "EPC2",
+                        "APOE",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 2223,
+                "term": {
+                    "level": 4,
+                    "id": "GO:0048584",
+                    "label": "positive regulation of response to stimulus"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 5,
+                "fold_enrichment": 9.510809312638582,
+                "fdr": 0.030927500073679164,
+                "expected": 0.5257176162028268,
+                "pValue": 1.85395383389187E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "SBNO2",
+                    "MEF2C",
+                    "SPI1",
+                    "KAT8",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 264,
+            "term": {
+                "level": 0,
+                "id": "GO:0030099",
+                "label": "myeloid cell differentiation"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 5,
+                "fold_enrichment": 9.474919466175795,
+                "fdr": 0.031134020878232072,
+                "expected": 0.5277089708096556,
+                "pValue": 1.8861883702774357E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "MEF2C",
+                    "CR1",
+                    "INPP5D",
+                    "CLU",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 265,
+            "term": {
+                "level": 0,
+                "id": "GO:0002460",
+                "label": "adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 7,
+                    "fold_enrichment": 8.854395773176876,
+                    "fdr": 0.006306240975042858,
+                    "expected": 0.790567778911069,
+                    "pValue": 1.3271216897928343E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "INPP5D",
+                        "MS4A2",
+                        "SCIMP",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 397,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0002764",
+                    "label": "immune response-regulating signaling pathway"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 23,
+                    "fold_enrichment": 2.363398164368384,
+                    "fdr": 0.005523368560782727,
+                    "expected": 9.731749963572781,
+                    "pValue": 8.8058296039518E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "NYAP1",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "INPP5D",
+                        "CASS4",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4887,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0007165",
+                    "label": "signal transduction"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 24,
+                    "fold_enrichment": 2.3039758288999446,
+                    "fdr": 0.004704468097929105,
+                    "expected": 10.41677594832192,
+                    "pValue": 7.2002572763406995E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "NYAP1",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "BIN1",
+                        "INPP5D",
+                        "CASS4",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5231,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0023052",
+                    "label": "signaling"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 23,
+                    "fold_enrichment": 2.162097871446704,
+                    "fdr": 0.012373004985372428,
+                    "expected": 10.637816309679927,
+                    "pValue": 4.576457427151334E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "NYAP1",
+                        "SPI1",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "INPP5D",
+                        "CASS4",
+                        "CLNK",
+                        "RIN3",
+                        "APOE",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 5342,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0007154",
+                    "label": "cell communication"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 26,
+                    "fold_enrichment": 1.9875839586528004,
+                    "fdr": 0.01466370853953375,
+                    "expected": 13.081208412258972,
+                    "pValue": 6.171830646063564E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SLC24A4",
+                        "NYAP1",
+                        "SPI1",
+                        "CLU",
+                        "SBNO2",
+                        "INPP5D",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "MEF2C",
+                        "CR1",
+                        "ADAM10",
+                        "ABCA7",
+                        "PILRA",
+                        "SCIMP",
+                        "CD2AP",
+                        "GPR141",
+                        "MS4A6A",
+                        "NME8",
+                        "CASS4",
+                        "CLNK",
+                        "RIN3",
+                        "MS4A2",
+                        "EPHA1",
+                        "FERMT2",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 6569,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0051716",
+                    "label": "cellular response to stimulus"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 11,
+                    "fold_enrichment": 5.907890961262554,
+                    "fdr": 0.0019110611862225623,
+                    "expected": 1.8619165573850114,
+                    "pValue": 1.584324687258039E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "INPP5D",
+                        "CLNK",
+                        "APOE",
+                        "MS4A2",
+                        "SCIMP",
+                        "CLU",
+                        "CD33",
+                        "HLA-DRB1"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 935,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0050776",
+                    "label": "regulation of immune response"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 8.779208596281766,
+                    "fdr": 0.04101212608561841,
+                    "expected": 0.5695274175530624,
+                    "pValue": 2.6677105163784695E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "INPP5D",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 286,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0001818",
+                    "label": "negative regulation of cytokine production"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.3498908425080405,
+                    "fdr": 0.030149385959408897,
+                    "expected": 2.0690174364952156,
+                    "pValue": 1.7496295659117462E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "BIN1",
+                        "INPP5D",
+                        "APOE",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1039,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0051241",
+                    "label": "negative regulation of multicellular organismal process"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 11,
+                    "fold_enrichment": 6.124033313503866,
+                    "fdr": 0.0015959853976343558,
+                    "expected": 1.7962018553596582,
+                    "pValue": 1.1195612125488117E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "CR1",
+                        "SPI1",
+                        "CELF1",
+                        "INPP5D",
+                        "ADAM10",
+                        "APOE",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 902,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0010629",
+                    "label": "negative regulation of gene expression"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 22,
+                    "fold_enrichment": 2.2755419356459274,
+                    "fdr": 0.012310093591343782,
+                    "expected": 9.668026616154256,
+                    "pValue": 4.710194601623793E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SUZ12",
+                        "MEF2C",
+                        "SLC24A4",
+                        "CR1",
+                        "SPI1",
+                        "EED",
+                        "CELF1",
+                        "ADAM10",
+                        "CUGBP2",
+                        "SCIMP",
+                        "CLU",
+                        "CD2AP",
+                        "SBNO2",
+                        "BIN1",
+                        "INPP5D",
+                        "KAT8",
+                        "CLNK",
+                        "EPC2",
+                        "APOE",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 4855,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0010468",
+                    "label": "regulation of gene expression"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 8,
+                    "fold_enrichment": 5.414239694957597,
+                    "fdr": 0.01972625222324943,
+                    "expected": 1.4775851182670359,
+                    "pValue": 9.686381105734367E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "CR1",
+                        "INPP5D",
+                        "CLNK",
+                        "SCIMP",
+                        "CLU",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 742,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0001817",
+                    "label": "regulation of cytokine production"
+                }
+            }
+        ]},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 5,
+                    "fold_enrichment": 8.779208596281766,
+                    "fdr": 0.04061395010420464,
+                    "expected": 0.5695274175530624,
+                    "pValue": 2.6677105163784695E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "BIN1",
+                        "EPHA1",
+                        "FERMT2",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 286,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0043547",
+                    "label": "positive regulation of GTPase activity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 8,
+                    "fold_enrichment": 6.820655099590044,
+                    "fdr": 0.007961028466204306,
+                    "expected": 1.1729078634222159,
+                    "pValue": 1.929207842074891E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "MEF2C",
+                        "CR1",
+                        "BIN1",
+                        "EPHA1",
+                        "FERMT2",
+                        "CD33",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 589,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0051345",
+                    "label": "positive regulation of hydrolase activity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 12,
+                    "fold_enrichment": 5.046942027209216,
+                    "fdr": 0.0025572382772662944,
+                    "expected": 2.377677400553694,
+                    "pValue": 2.446181631209388E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "MEF2C",
+                        "CR1",
+                        "BIN1",
+                        "CASS4",
+                        "APOE",
+                        "EPHA1",
+                        "CLU",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1194,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0043085",
+                    "label": "positive regulation of catalytic activity"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 12,
+                    "fold_enrichment": 3.789967786470317,
+                    "fdr": 0.012418132799199108,
+                    "expected": 3.166253824857934,
+                    "pValue": 4.355572373929921E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "USP6NL",
+                        "MEF2C",
+                        "CR1",
+                        "BIN1",
+                        "CASS4",
+                        "APOE",
+                        "EPHA1",
+                        "CLU",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1590,
+                "term": {
+                    "level": 3,
+                    "id": "GO:0044093",
+                    "label": "positive regulation of molecular function"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 6,
+                "fold_enrichment": 8.277539533637093,
+                "fdr": 0.017678727355063498,
+                "expected": 0.7248530768857158,
+                "pValue": 8.455484673361152E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "CR1",
+                    "SPI1",
+                    "CLNK",
+                    "APOE",
+                    "SCIMP",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 364,
+            "term": {
+                "level": 0,
+                "id": "GO:0002831",
+                "label": "regulation of response to biotic stimulus"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 7,
+                "fold_enrichment": 6.029494205748232,
+                "fdr": 0.02721642050372159,
+                "expected": 1.1609597357812425,
+                "pValue": 1.4579295467843974E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "MEF2C",
+                    "BIN1",
+                    "CELF1",
+                    "INPP5D",
+                    "APOE",
+                    "CLU",
+                    "PICALM"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 583,
+            "term": {
+                "level": 0,
+                "id": "GO:0010942",
+                "label": "positive regulation of cell death"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 7,
+                "fold_enrichment": 5.957957833815627,
+                "fdr": 0.02859014173596488,
+                "expected": 1.1748992180290445,
+                "pValue": 1.5679817545392384E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "MEF2C",
+                    "CASS4",
+                    "APOE",
+                    "EPHA1",
+                    "CLU",
+                    "FERMT2",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 590,
+            "term": {
+                "level": 0,
+                "id": "GO:0051347",
+                "label": "positive regulation of transferase activity"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 7,
+                "fold_enrichment": 5.957957833815627,
+                "fdr": 0.028261519417160683,
+                "expected": 1.1748992180290445,
+                "pValue": 1.5679817545392384E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "MEF2C",
+                    "CR1",
+                    "SPI1",
+                    "INPP5D",
+                    "CLNK",
+                    "CLU",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 590,
+            "term": {
+                "level": 0,
+                "id": "GO:0050778",
+                "label": "positive regulation of immune response"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 10,
+                    "fold_enrichment": 5.907890961262554,
+                    "fdr": 0.003705534520531135,
+                    "expected": 1.6926514158045558,
+                    "pValue": 5.198760248178366E-6,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "ABI3",
+                        "ADAM10",
+                        "ABCA7",
+                        "APOE",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 850,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0032880",
+                    "label": "regulation of protein localization"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 10,
+                    "fold_enrichment": 5.2200699761675375,
+                    "fdr": 0.006808424918542286,
+                    "expected": 1.9156831317693914,
+                    "pValue": 1.5196407891651043E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "SPI1",
+                        "ABI3",
+                        "ADAM10",
+                        "ABCA7",
+                        "APOE",
+                        "FERMT2",
+                        "CD33",
+                        "HLA-DRB1",
+                        "CD2AP",
+                        "PICALM"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 962,
+                "term": {
+                    "level": 1,
+                    "id": "GO:0060341",
+                    "label": "regulation of cellular localization"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 10,
+                "fold_enrichment": 5.161055824330083,
+                "fdr": 0.007297489904143257,
+                "expected": 1.9375880324445094,
+                "pValue": 1.6753372651562864E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "SBNO2",
+                    "CR1",
+                    "SPI1",
+                    "CELF1",
+                    "ADAM10",
+                    "CLNK",
+                    "RIN3",
+                    "APOE",
+                    "SCIMP",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 973,
+            "term": {
+                "level": 0,
+                "id": "GO:0032101",
+                "label": "regulation of response to external stimulus"
+            }
+        }},
+        {"result": [
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.864947885216204,
+                    "fdr": 0.01709676106783367,
+                    "expected": 1.849968429744038,
+                    "pValue": 7.522967372492338E-5,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ABI3",
+                        "CASS4",
+                        "ADAM10",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 929,
+                "term": {
+                    "level": 0,
+                    "id": "GO:0030334",
+                    "label": "regulation of cell migration"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.5698044341414095,
+                    "fdr": 0.023400509024044124,
+                    "expected": 1.9694497061537715,
+                    "pValue": 1.2087502269929048E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ABI3",
+                        "CASS4",
+                        "ADAM10",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 989,
+                "term": {
+                    "level": 1,
+                    "id": "GO:2000145",
+                    "label": "regulation of cell motility"
+                }
+            },
+            {
+                "input_list": {
+                    "number_in_list": 9,
+                    "fold_enrichment": 4.370925130914752,
+                    "fdr": 0.029736430244416093,
+                    "expected": 2.0590606634610715,
+                    "pValue": 1.6877382129666682E-4,
+                    "mapped_id_list": {"mapped_id": [
+                        "MEF2C",
+                        "SPI1",
+                        "ABI3",
+                        "CASS4",
+                        "ADAM10",
+                        "RIN3",
+                        "APOE",
+                        "EPHA1",
+                        "FERMT2"
+                    ]},
+                    "list_name": "upload_1",
+                    "plus_minus": "+"
+                },
+                "number_in_reference": 1034,
+                "term": {
+                    "level": 2,
+                    "id": "GO:0040012",
+                    "label": "regulation of locomotion"
+                }
+            }
+        ]},
+        {"result": {
+            "input_list": {
+                "number_in_list": 12,
+                "fold_enrichment": 3.5997901914503014,
+                "fdr": 0.016551727836783096,
+                "expected": 3.3335276118315607,
+                "pValue": 7.177587481035971E-5,
+                "mapped_id_list": {"mapped_id": [
+                    "SUZ12",
+                    "MEF2C",
+                    "CR1",
+                    "CELF1",
+                    "INPP5D",
+                    "ADAM10",
+                    "APOE",
+                    "EPHA1",
+                    "CLU",
+                    "FERMT2",
+                    "CD33",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 1674,
+            "term": {
+                "level": 0,
+                "id": "GO:0042127",
+                "label": "regulation of cell population proliferation"
+            }
+        }},
+        {"result": {
+            "input_list": {
+                "number_in_list": 13,
+                "fold_enrichment": 3.0028608611753094,
+                "fdr": 0.033347945183302065,
+                "expected": 4.329204915246005,
+                "pValue": 2.0841136585444823E-4,
+                "mapped_id_list": {"mapped_id": [
+                    "MEF2C",
+                    "CR1",
+                    "SPI1",
+                    "ADAM10",
+                    "ABCA7",
+                    "MS4A6A",
+                    "INPP5D",
+                    "CASS4",
+                    "CLNK",
+                    "MS4A2",
+                    "EPHA1",
+                    "FERMT2",
+                    "HLA-DRB1"
+                ]},
+                "list_name": "upload_1",
+                "plus_minus": "+"
+            },
+            "number_in_reference": 2174,
+            "term": {
+                "level": 0,
+                "id": "GO:0007166",
+                "label": "cell surface receptor signaling pathway"
+            }
+        }}
+    ]
+}}
